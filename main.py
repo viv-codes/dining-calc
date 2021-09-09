@@ -3,7 +3,7 @@ from datetime import  date,datetime
 def calc():
     mealplan=input("Please enter the number corresponding to your meal plan: 1=$3500/semester 2=$3020/semester:")
     if(mealplan==1):
-        funds=3500 #WHY DOESNT THIS WORK WTF PYTHON
+        funds=3500
         weekly=219
         daily=(weekly/7)
     else:
