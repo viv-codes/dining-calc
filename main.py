@@ -15,7 +15,7 @@ def calc():
     totaldays=daysbetween(d1)
     possiblespent=totaldays*daily
     balence=input("Please enter how much funds you have remaining: ")
-    surplus=(int(funds)-int(balence))-int(possiblespent)
+    surplus=int(possiblespent)-(int(funds)-float(balence))
     print("You have a surplus of ",surplus," dining dollars. ")
 
 
