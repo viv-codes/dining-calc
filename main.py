@@ -1,5 +1,4 @@
 from datetime import  date,datetime
-print(date.today())
 
 def calc():
     mealplan=input("Please enter the number corresponding to your meal plan: 1=$3500/semester 2=$3020/semester:")
@@ -12,7 +11,8 @@ def calc():
         weekly=189
         daily=(weekly/7)
     d1=input("Please enter the day that you moved in in the format yyyy-mm-dd: ")
-    totaldays=daysbetween(d1)
+    d2=date.today()
+    totaldays=daysbetween(d1,d2)
     possiblespent=totaldays*daily
     balence=input("Please enter how much funds you have remaining: ")
     surplus=int(possiblespent)-(int(funds)-float(balence))
@@ -20,12 +20,13 @@ def calc():
 
 
 
-def daysbetween(d1):
+def daysbetween(d1,d2):
     d1 = datetime.strptime(str(d1), "%Y-%m-%d")
-    d2 = datetime.strptime(str(date.today()), "%Y-%m-%d")
+    d2 = datetime.strptime(str(d2), "%Y-%m-%d")
     return abs((d2 - d1).days)
 
 def main():
     calc()
 
-main()
+if __name__=="__main__":
+    main()
